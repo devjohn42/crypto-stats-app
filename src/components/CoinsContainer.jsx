@@ -1,6 +1,8 @@
 import React from "react";
 import CoinItem from "./CoinItem";
 
+import "./Coins.css";
+
 const CoinsContainer = (props) => {
   return (
     <section className="container">

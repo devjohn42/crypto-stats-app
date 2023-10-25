@@ -7,10 +7,11 @@ import Header from "./components/Header";
 const App = () => {
   const [cryptos, setCryptos] = useState([]);
   const cryptoURL =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false";
 
-  //axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
-  //axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+  // axios.defaults.headers.post["Content-Type"] =
+  //   "application/json;charset=utf-8";
+  // axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
   useEffect(() => {
     axios
@@ -21,7 +22,7 @@ const App = () => {
         console.log(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error + "Fudeo a API");
       });
   }, []);
 
