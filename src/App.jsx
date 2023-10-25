@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import CoinsContainer from "./components/CoinsContainer";
+import Header from "./components/Header";
 
 const App = () => {
   const [cryptos, setCryptos] = useState([]);
   const cryptoURL =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false";
 
-  axios.defaults.headers.post["Content-Type"] =
-    "application/json;charset=utf-8";
-  axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+  //axios.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
+  //axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+
   useEffect(() => {
     axios
       .get(cryptoURL)
@@ -25,6 +27,7 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <CoinsContainer coins={cryptos} />
     </>
   );

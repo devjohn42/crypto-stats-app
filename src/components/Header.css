@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #00ffb9;
+}
+
+.stats {
+  color: #00ffb9;
+}
