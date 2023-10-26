@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
 
 import CoinsContainer from "./components/CoinsContainer";
 import Header from "./components/Header";
+import CoinInfo from "./routes/CoinInfo";
 
 const App = () => {
   const [cryptos, setCryptos] = useState([]);
@@ -29,7 +31,12 @@ const App = () => {
   return (
     <>
       <Header />
-      <CoinsContainer coins={cryptos} />
+      <Routes>
+        <Route path="/" element={<CoinsContainer coins={cryptos} />} />
+        <Route path="/coin" element={<CoinInfo />}>
+          <Route path=":coinId" element={<CoinInfo />} />
+        </Route>
+      </Routes>
     </>
   );
 };
