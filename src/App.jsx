@@ -20,8 +20,8 @@ const App = () => {
       .get(cryptoURL)
       .then((response) => {
         setCryptos(response.data);
-        console.log(response.data[0]);
-        console.log(response.data);
+        // console.log(response.data);
+        // console.log(response.data[0]);
       })
       .catch((error) => {
         console.log(error);

@@ -51,13 +51,13 @@ img {
 }
 
 @media screen and (max-width: 1024px) {
-  .coinName {
-    margin-left: -2rem;
-  }
   .hideMobile {
     display: none;
   }
   .coinRow:hover {
     transform: none;
+  }
+  img {
+    height: 35px;
   }
 }

@@ -9,7 +9,7 @@ const Header = () => {
       <header className="header">
         <FaCoins className="icon" />
         <h1>
-          Crypto <span className="stats">Stats</span>
+          Crypto <span className="statsTitle">Stats</span>
         </h1>
       </header>
     </Link>
