@@ -5,6 +5,8 @@
 
 ## Link from Video Tutorial
 
+#### This tutorial wasn't made for me, I created the project from it
+
 - [Video Tutorial](https://youtu.be/gxXw-M5lDOw)
 
 ## Link from API
